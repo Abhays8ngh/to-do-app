@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+</head>
+<link rel="stylesheet" href="script.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+    integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<body>
+    <div class="option nav ">
+        <button data-page="task" class="btn active">My Task</button>
+        <button data-page="habits" class="btn ">My Habits</button>
+        <button data-page="history" class="btn">History</button>
+    </div>
+    <div class=" task-app container" id="task-page">
+        <header>
+            <h1>
+                <!-- <i class="fa-solid fa-check"></i>
+                <i class="fa-regular fa-circle-check"></i> -->
+                <i class="fa-solid fa-list-check"></i>
+                <!-- <i class="fa-solid fa-clipboard-check"></i> -->
+
+                MY TASK
+            </h1>
+            <p class="date"></p>
+            <div class="todo-input">
+                <input type="text" name="" id="text-input" placeholder="what do you want to do ?">
+                <button id="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+
+                    <!-- <i class="fa-solid fa-circle-plus"></i> -->
+                </button>
+                <!-- <i class="fa-regular fa-circle-plus"></i>
+                   <i class="fa-solid fa-square-plus"></i>
+                   <i class="fa-solid fa-pen-to-square"></i>
+                   <i class="fa-solid fa-circle-plus"></i> -->
+            </div>
+            <div class="filter">
+                <button data-filter="all">all</button>
+                <button data-filter="active">active</button>
+                <button data-filter="completed">completed</button>
+            </div>
+            <p class="task-count">Total Tasks: 0</p>
+            <p class="completed-count">Completed: 0</p>
+            <div class="task-box">
+                <p class="empty-message">No tasks yet. Add a task to get started!</p>
+            </div>
+            <button id="clear"> Clear All</button>
+        </header>
+    </div>
+
+
+
+    <div id="habits-page">
+    
+
+</div>
+    <div class="history-page container">
+        <h1>Tasks History</h1>
+        <div class="history-controls month-select">
+        <label for="history-month ">Select Month:</label>
+        <input type="month" id="history-month" class="" >
+    </div>
+     <div id="history-content">
+        <p>Select a month to view your task history.</p>
+    </div>
+    </div>
+    <script src="style.js"></script>
+</body>
+
+</html>
