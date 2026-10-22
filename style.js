@@ -182,6 +182,7 @@ showhistory();
         
 
         localStorage.setItem("tasks", JSON.stringify(taskList));
+        showhistory();
     }
 
 });
@@ -193,6 +194,7 @@ showhistory();
     taskList = taskList.filter((task) => task !== taskData);
 
     localStorage.setItem("tasks", JSON.stringify(taskList));
+    showhistory();
 
     task.remove();
     count = taskList.length;
@@ -335,13 +337,23 @@ function showhistory(){
         })
         console.log(dategroup);
        const dates = Object.keys(dategroup).sort().reverse();
+       if(dates.length==0){
+        historyContent.textContent = "No tasks found for this month.";
+        return;
+        
+       }
 
 dates.forEach((date) => {
     const dateBox = document.createElement("div");
     dateBox.classList.add("history-date-box");
-
+    const formattedDate = new Date(date + "T12:00:00").toLocaleDateString("en-IN", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+});
     const heading = document.createElement("h3");
-    heading.textContent = date;
+    heading.textContent = formattedDate;
 
     dateBox.appendChild(heading);
     
