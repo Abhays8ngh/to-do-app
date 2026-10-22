@@ -236,6 +236,29 @@ clear.addEventListener("click", () => {
 cancelClear.addEventListener("click", () => {
     clearModal.style.display = "none";
 });
+clearModal.addEventListener("click", (event) => {
+    if (event.target === clearModal) {
+        clearModal.style.display = "none";
+    }
+});
+const clearToday = document.querySelector("#clear-today");
+
+clearToday.addEventListener("click", () => {
+    taskList = taskList.filter((task) => task.date !== today);
+
+    localStorage.setItem("tasks", JSON.stringify(taskList));
+
+    tasks.querySelectorAll(".task").forEach((task) => task.remove());
+
+    count = 0;
+    completed = 0;
+
+    updateTaskCount();
+    updateEmptyMessage();
+    showhistory();
+
+    clearModal.style.display = "none";
+});
 });
 
 function updateEmptyMessage() {
