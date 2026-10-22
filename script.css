@@ -442,16 +442,25 @@ body {
 /* clear model
  */
  .clear-modal{
-    /* display: none; */
+    display: none;
     position: fixed;
     inset: 0;
-    z-index: 100;
-    background: rgba(0, 0, 0, .7);
+    z-index: 1000;
+    background: rgba(15, 23, 42, 0.35);
     justify-content: center;
     align-items: center;
     padding: 20px;
     
+    
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(8px);
  }
+ /* .modal-back{
+    background: rgba(0, 0, 0, .2);
+    width: 100%;
+    height: 100%;
+
+ } */
  .clear-modal-content{
     background: white;
     color: #222;
@@ -460,7 +469,9 @@ body {
     padding: 28px;
     border: 18px;
     box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
+    z-index: 1000;
  }
+
 
 .clear-modal-content h2 {
     margin-top: 0;
