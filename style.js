@@ -6,6 +6,7 @@ const completedCount = document.querySelector(".completed-count");
 const filterButtons = document.querySelectorAll(".filter button");
 const clear=document.querySelector("#clear");
 const emptyMessage = document.querySelector(".empty-message");
+const clearModal = document.querySelector("#clear-modal");
 
 let completed = 0;
 let currentFilter = "all";
@@ -218,17 +219,23 @@ task.appendChild(checkBox);
 }
 // clear
 clear.addEventListener("click", () => {
-    if (!confirm("Are you sure you want to clear all tasks?")) {
-        return;
-    }
+    // if (!confirm("Are you sure you want to clear all tasks?")) {
+    //     return;
+    // }
 
-    taskList = [];
-    localStorage.removeItem("tasks");
-    tasks.querySelectorAll(".task").forEach((task) => task.remove());
-    count=0;
-    completed=0;
-    updateTaskCount();
-    updateEmptyMessage();
+    // taskList = [];
+    // localStorage.removeItem("tasks");
+    // tasks.querySelectorAll(".task").forEach((task) => task.remove());
+    // count=0;
+    // completed=0;
+    // updateTaskCount();
+    // updateEmptyMessage();
+    clearModal.style.display = "flex";
+    const cancelClear = document.querySelector("#cancel-clear");
+
+cancelClear.addEventListener("click", () => {
+    clearModal.style.display = "none";
+});
 });
 
 function updateEmptyMessage() {
@@ -420,3 +427,4 @@ for (const key in taskGroups) {
 }
 
 analyzeTasks();
+
