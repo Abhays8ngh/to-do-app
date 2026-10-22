@@ -439,3 +439,68 @@ body {
     background-color: #4338ca;
     border-color: #4338ca;
 }
+/* clear model
+ */
+ .clear-modal{
+    /* display: none; */
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, .7);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+ }
+ .clear-modal-content{
+    background: white;
+    color: #222;
+    width: 100%;
+    max-width: 400px;
+    padding: 28px;
+    border: 18px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
+ }
+
+.clear-modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+.clear-modal-content p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+.clear-modal-content button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f8f8f8;
+    color: #222;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.clear-modal-content button:hover {
+    background: #eaeaea;
+}
+#delete-everything {
+    color: #c62828;
+    border-color: #efb5b5;
+    background: #fff5f5;
+}
+#delete-everything:hover {
+    background: #ffe5e5;
+}
+#cancel-clear {
+    background: #222;
+    color: white;
+    border-color: #222;
+}
+#cancel-clear:hover {
+    background: #444;
+}
