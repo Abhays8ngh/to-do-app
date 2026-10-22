@@ -56,7 +56,7 @@ btn.addEventListener("click",()=>{
     localStorage.setItem("tasks", JSON.stringify(taskList));
 
     createTask(taskData);
-
+    showhistory();
     input.value="";
     count = taskList.length;
     
@@ -163,7 +163,7 @@ updateTaskCount();
 localStorage.setItem("tasks", JSON.stringify(taskList));
 
 applyfilter();
-
+showhistory();
 });
 
     task.classList.add("task");
