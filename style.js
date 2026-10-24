@@ -350,11 +350,16 @@ historyMonth.value = today.slice(0, 7);
 // change event addEventListener
 function showhistory(){ 
     const selectedMonth = historyMonth.value;
-    console.log(selectedMonth);
-    const monthtask=taskList.filter((task)=>
-        {
-            return task.date.startsWith(selectedMonth);
-        })
+    const selectedDate=history_date.value;
+    // console.log(selectedMonth);
+    // const monthtask=taskList.filter((task)=>
+    //     {
+    //         return task.date.startsWith(selectedMonth) && task.date.startsWith(selectedDate);
+    //     })
+    // const dateTasks=taskList.filter((task)=>
+    //     {
+    //         return task.date.startsWith(selectedDate);
+    //     })
         console.log(monthtask);
         historyContent.innerHTML = "";
         const dategroup={};
@@ -400,6 +405,7 @@ dategroup[date].forEach((task) => {
 });
 };
 historyMonth.addEventListener("change", showhistory);
+history_date.addEventListener("change",showhistory);
 
 showhistory();
 function updateTodayStats() {
