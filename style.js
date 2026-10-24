@@ -7,7 +7,7 @@ const filterButtons = document.querySelectorAll(".filter button");
 const clear=document.querySelector("#clear");
 const emptyMessage = document.querySelector(".empty-message");
 const clearModal = document.querySelector("#clear-modal");
-
+const history_date=document.querySelector("#history-date");
 let completed = 0;
 let currentFilter = "all";
 let count=0;
