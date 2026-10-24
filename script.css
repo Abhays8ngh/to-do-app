@@ -332,7 +332,8 @@ body {
     color: #374151;
 }
 
-.history-controls input[type="month"] {
+.history-controls input[type="month"],
+.history-controls input[type="date"] {
     padding: 10px 12px;
     border: 1px solid #d1d5db;
     border-radius: 8px;
@@ -343,9 +344,11 @@ body {
     outline: none;
 }
 
-.history-controls input[type="month"]:focus {
-    border-color: #4f46e5;
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+.history-controls input[type="month"]:focus,
+.history-controls input[type="date"]:focus 
+{
+    border-color: #2563eb; /* Primary accent color */
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 }
 
 .history-date-box {
