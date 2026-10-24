@@ -350,7 +350,7 @@ historyMonth.value = today.slice(0, 7);
 // change event addEventListener
 function showhistory(){ 
     const selectedMonth = historyMonth.value;
-    const selectedDate=history_date.value;
+   
     // console.log(selectedMonth);
     const monthtask=taskList.filter((task)=>
         {
