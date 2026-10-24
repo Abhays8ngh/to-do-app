@@ -354,7 +354,7 @@ function showhistory(){
     // console.log(selectedMonth);
     const monthtask=taskList.filter((task)=>
         {
-            return task.date.startsWith(selectedMonth);
+            return task.date.startsWith(selectedMonth) && task.date.startsWith(selectedDate);
         })
     // const dateTasks=taskList.filter((task)=>
     //     {
